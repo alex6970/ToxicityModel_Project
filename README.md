@@ -1,7 +1,7 @@
 Toxicity Model Project
 ==============================
 
-•The application is a toxicity monitor, where the user inputs a piece of text, and the application should be able to infer if the text is toxic or not. The purpose of this project is to combine all the skills collected throughout the entire course, and to provide a solid example of real-life application development in a DevOps environment.
+The application is a toxicity monitor, where the user inputs a piece of text, and the application should be able to infer if the text is toxic or not. The purpose of this project is to combine all the skills collected throughout the entire course, and to provide a solid example of real-life application development in a DevOps environment.
 
 Project Organization
 ------------
