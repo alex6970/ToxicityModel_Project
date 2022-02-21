@@ -1,0 +1,48 @@
+body {
+  background-color: black;
+  font-family: 'Readex Pro', sans-serif;
+
+}
+
+h1 {
+  color: #dfe6e9;
+}
+p {
+  color: #dfe6e9;
+}
+
+.efreiLogo {
+  width: 160px;
+  height: auto;
+}
+
+.header {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+
+
+
+
+
+footer {
+  background-color: #2f3542;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: lightgrey;
+}
