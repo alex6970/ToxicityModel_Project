@@ -19,24 +19,25 @@
 
 
   <div class="header">
-    <h1>Welcome to the RESULTS</h1>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+    <h1>Welcome to the results page.</h1>
+    <h3> The text you submitted is : <strong>{{submittedText}}</strong></h3>
 
   </div>
 
 
+  <div class="centered">
 
+    <h2>Toxicity results on your text : </h2>
 
-  <div class="container justify-content-center align-items-center">
+    <ul class="list-group">
+      <li class="list-group-item">Toxicity : {{toxRes}} </li>
+      <li class="list-group-item">Severe Toxicity : {{sevRes}} </li>
+      <li class="list-group-item">Obscene : {{obsRes}} </li>
+      <li class="list-group-item">Threat : {{thrRes}} </li>
+      <li class="list-group-item">Insult : {{insRes}} </li>
+      <li class="list-group-item">Identity attack : {{idaRes}} </li>
+    </ul>
 
-    <div class="child">
-
-      <h1>Toxicity Monitoring</h1>
-      <p>Type something and a see if it is toxic or not.</p>
-
-
-
-    </div>
 
   </div>
 
