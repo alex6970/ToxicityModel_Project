@@ -8,11 +8,23 @@ agent any
             }
         }
 
-//        stage('Running tests') {
-//                    steps {
-//                  // add steps to run python tests
-//                  // cf. jenkins branch selection
-//            }
-//        }
+        stage('Running tests') {
+                    steps {
+
+                  // add steps to run python tests
+                  // cf. jenkins branch selection
+
+                  bat 'cd tests'
+                  bat 'python -m pytest'
+            }
+        }
+
+        stage('Shutting down') {
+                    steps {
+
+                    bat 'docker-compose down'
+
+            }
+        }
     }
 }
