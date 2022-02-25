@@ -6,7 +6,7 @@ agent any
                     branch 'develop'
                 }
             steps {
-                bat 'docker-compose up'
+                bat 'docker-compose up -d --build'
                 // echo 'It works'
             }
         }
