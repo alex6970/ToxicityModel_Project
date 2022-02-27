@@ -8,6 +8,7 @@ stages {
           script{
 
           if(env.BRANCH_NAME == 'develop'){
+            echo 'this is working aight'
 
             bat 'docker-compose up -d --build'
             // echo 'It works'
