@@ -18,15 +18,34 @@ def test_index(client):
     var = client.get('/')
     assert var.status_code == 200
     
-def test_unit(client):
-    p = {"inputedText":"Hello World"}
+def test_unit_null(client):
+    p = {"inputedText":"Hello World"} # here, we are testing the result with a not toxic sentence
     response = client.post("/",data=p)
     assert b'<li class="list-group-item">Toxicity : 0.0 </li>' in response.data
-    ### mettre les autres assertions
-    
-def test_inte(client):
-    response = client.post("/")
-    assert response.data.decode('UTF-8') == open('/app/src/templates/resultsPage.html').read()
+    assert b'<li class="list-group-item">Severe Toxicity : 0.0 </li>' in response.data
+    assert b'<li class="list-group-item">Obscene : 0.0 </li>' in response.data
+    assert b'<li class="list-group-item">Threat : 0.0 </li>' in response.data
+    assert b'<li class="list-group-item">Insult : 0.0 </li>' in response.data
+    assert b'<li class="list-group-item">Identity attack : 0.0 </li>' in response.data
+  ## we know that this text is marked 0 on all criteria
+  
+def test_unit_tox(client):
+    p = {"inputedText":"fuck"} # here, we are testing the result with a toxic text
+    response = client.post("/",data=p)
+    # we know that the text we input will output the following result
+    assert b'<li class="list-group-item">Toxicity : 0.99 </li>' in response.data
+    assert b'<li class="list-group-item">Severe Toxicity : 0.25 </li>' in response.data
+    assert b'<li class="list-group-item">Obscene : 0.99 </li>' in response.data
+    assert b'<li class="list-group-item">Threat : 0.0 </li>' in response.data
+    assert b'<li class="list-group-item">Insult : 0.32 </li>' in response.data
+    assert b'<li class="list-group-item">Identity attack : 0.0 </li>' in response.data
     
 
-
+        
+def test_integration(client):
+    p = {"inputedText":""} # testing function with post, and watch that we are calling the results page
+    response = client.post("/",data=p)
+    assert response.status_code == 200
+    assert b'<h1>Welcome to the results page.</h1>' in response.data
+    
+    
