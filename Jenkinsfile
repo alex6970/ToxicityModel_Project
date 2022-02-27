@@ -1,13 +1,20 @@
 pipeline {
 agent any
-script{
-if(env.BRANCH_NAME == 'develop'){
 
 stages {
     stage('Build and Running') {
         steps {
+
+          script{
+
+          if(env.BRANCH_NAME == 'develop'){
+
             bat 'docker-compose up -d --build'
             // echo 'It works'
+            
+          }
+
+          }
         }
     }
 
@@ -31,6 +38,4 @@ stages {
     }
 
   }
- }
- }
 }
