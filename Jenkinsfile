@@ -11,7 +11,7 @@ stages {
 
             bat 'docker-compose up -d --build'
             // echo 'It works'
-            
+
           }
 
           }
@@ -21,18 +21,35 @@ stages {
     stage('Running tests') {
                 steps {
 
-              // add steps to run python tests
-              // cf. jenkins branch selection
+                script{
 
-              bat 'cd tests'
-              bat 'python -m pytest'
+                if(env.BRANCH_NAME == 'develop'){
+
+                    // add steps to run python tests
+                    // cf. jenkins branch selection
+
+                    bat 'cd tests'
+                    bat 'python -m pytest'
+
+                }
+
+            }
         }
     }
 
     stage('Shutting down') {
                 steps {
 
+                script{
+
+                if(env.BRANCH_NAME == 'develop'){
+
                 bat 'docker-compose down'
+
+
+                }
+
+            }
 
         }
     }
