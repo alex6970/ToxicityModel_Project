@@ -1,5 +1,6 @@
 pipeline {
 agent any
+script{
 if(env.BRANCH_NAME == 'develop'){
 
 stages {
@@ -30,5 +31,6 @@ stages {
     }
 
   }
+ }
  }
 }
