@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+
+<head>
+  <title>Homepage</title>
+</head>
+<body>
+
+  <!-- As a heading -->
+  <nav class="navbar" style="background-color: #2f3542;">
+    <img class="efreiLogo" src="https://www.efrei.fr/wp-content/uploads/2022/01/LOGO_EFREI-Blanc_Web.png", alt="Image"/>
+  </nav>
+
+
+  <div class="header">
+    <h1>Welcome to the homepage</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
+  </div>
+
+
+
+
+  <div class="container justify-content-center align-items-center">
+
+    <div class="child">
+
+      <h1>Toxicity Monitoring</h1>
+      <p>Type something and a see if it is toxic or not.</p>
+
+      <form method="POST" onSubmit="return validate();">
+
+        <div class="form-group grey-border-focus" >
+          <textarea name="inputedText" class="form-control" id="exampleFormControlTextarea5" rows="3" placeholder="Write something here..."></textarea>
+        </div>
+
+
+        <div class="form-row">
+
+          <div class="col">
+            <button type="submit" class="btn btn-outline-dark btn-lg">Submit</button>
+          </div>
+
+        </div>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <footer class="text-center text-white fixed-bottom">
+
+    <a href="https://github.com/alex6970/ToxicityModel_Project"><i class="fab fa-github fa-2x"></i></a>
+    <p>© Made by Alexandra Goncalves, Sandra Keutcha and Elisa Nitschké. </p>
+
+  </footer>
+
+
+
+
+</body>
+</html>
