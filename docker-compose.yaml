@@ -10,7 +10,7 @@ services:
 
   jenkins:
     container_name: jenkinsCont
-    image: jenkins/jenkins:lts
+    image: jenkins/jenkins:latest
     ports:
       - "8081:8080"
       - "50000:50000"

@@ -6,5 +6,4 @@ COPY . .
 RUN pip install --no-cache-dir torch
 RUN pip install -r requirements.txt
 EXPOSE 5000
-EXPOSE 8081
 CMD ["python","src/app.py"]
