@@ -11,29 +11,5 @@ agent any
             }
         }
 
-        stage('Running tests') {
-              when {
-                      branch 'develop'
-                  }
-                    steps {
-
-                  // add steps to run python tests
-                  // cf. jenkins branch selection
-
-                  bat 'cd tests'
-                  bat 'python -m pytest'
-            }
-        }
-
-        stage('Shutting down') {
-            when {
-                    branch 'develop'
-                }
-                    steps {
-
-                    bat 'docker-compose down'
-
-            }
-        }
     }
 }
