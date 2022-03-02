@@ -19,15 +19,6 @@ stages {
               }
             }
 
-  stage('Running basic test') {
-        steps {
-
-          bat 'cd tests'
-          bat 'python -m pytest'
-
-              }
-            }
-
   stage('Container down and cleaning') {
         steps {
 
