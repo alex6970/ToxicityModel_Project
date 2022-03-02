@@ -14,7 +14,7 @@ stages {
   stage('Running the container') {
         steps {
 
-          bat 'docker-compose up -d'
+          bat 'docker-compose up -d' 
 
               }
             }
