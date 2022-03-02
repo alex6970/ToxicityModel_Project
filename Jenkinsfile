@@ -4,19 +4,37 @@ agent any
 stages {
 
   stage('Building') {
-                steps {
+        steps {
 
-                  bat 'docker-compose build'
+          bat 'docker-compose build'
 
-                      }
-                    }
+              }
+            }
+
   stage('Running the container') {
-                steps {
-                
-                  bat 'docker-compose up -d'
+        steps {
 
-                      }
-                    }
+          bat 'docker-compose up -d'
+
+              }
+            }
+
+  stage('Running basic test') {
+        steps {
+
+          bat 'cd tests'
+          bat 'python -m pytest'
+
+              }
+            }
+
+  stage('Container down and cleaning') {
+        steps {
+
+          bat 'docker-compose down'
+
+              }
+            }
 
   }
 }
