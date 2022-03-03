@@ -3,18 +3,18 @@ agent any
 
 stages {
 
-  stage('Building') {
-        steps {
+  //stage('Building') {
+        //steps {
 
-          sh 'docker-compose build'
+          //bat 'docker-compose build'
 
-              }
-            }
+              //}
+            //}
 
   stage('Running the container') {
         steps {
 
-          sh 'docker-compose up -d'
+          bat 'docker-compose up -d --build'
 
               }
             }
