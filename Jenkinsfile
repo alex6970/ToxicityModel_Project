@@ -6,7 +6,7 @@ stages {
   stage('Building') {
         steps {
 
-          bat 'docker-compose build'
+          sh 'docker-compose build'
 
               }
             }
@@ -14,7 +14,7 @@ stages {
   stage('Running the container') {
         steps {
 
-          bat 'docker-compose up -d'
+          sh 'docker-compose up -d'
 
               }
             }
