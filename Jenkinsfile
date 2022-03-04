@@ -6,7 +6,7 @@ stages {
   stage('Building') {
         steps {
 
-          sh '/usr/local/bin/docker_compose build'
+          sh 'docker-compose build'
 
               }
             }
@@ -14,7 +14,7 @@ stages {
   stage('Running the container') {
         steps {
 
-          sh '/usr/local/bin/docker_compose up -d'
+          sh 'docker-compose up -d'
 
               }
             }
