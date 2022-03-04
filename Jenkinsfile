@@ -6,7 +6,7 @@ stages {
   stage('Building') {
         steps {
 
-          sh 'docker-compose build'
+          bat 'docker-compose build'
 
               }
             }
@@ -14,7 +14,7 @@ stages {
   stage('Running the container') {
         steps {
 
-          sh 'docker-compose up -d'
+          bat 'docker-compose up -d'
 
               }
             }
@@ -22,8 +22,8 @@ stages {
   stage('Running the test') {
         steps {
 
-          sh 'cd tests'
-          sh 'python -m pytest'
+          bat 'cd tests'
+          bat 'python -m pytest'
 
               }
             }
@@ -31,7 +31,7 @@ stages {
   stage('Container down and cleaning') {
         steps {
 
-          sh 'docker-compose down'
+          bat 'docker-compose down'
 
               }
             }
