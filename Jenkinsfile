@@ -6,7 +6,7 @@ stages {
   stage('Building') {
         steps {
 
-          sh 'docker-compose build'
+          sh '/usr/bin/docker-compose build'
 
               }
             }
