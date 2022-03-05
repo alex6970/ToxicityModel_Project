@@ -27,7 +27,7 @@ stages {
         steps {
 
           sh 'cd tests'
-          sh 'pip install -U pytest'
+          sh '/Users/alexandra/opt/anaconda3/bin/python -m pip install --upgrade pip'
           sh 'python -m pytest'
 
               }
