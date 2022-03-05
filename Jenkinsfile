@@ -27,8 +27,8 @@ stages {
         steps {
 
           sh 'cd tests'
-          sh '/Users/alexandra/opt/anaconda3/bin/python -m pip install --upgrade pip'
-          sh '/Users/alexandra/opt/anaconda3/bin/pip install -r requirements.txt'
+          sh 'python -m pip install --upgrade pip'
+          sh 'pip install -r requirements.txt'
           sh 'python -m pytest'
 
               }
