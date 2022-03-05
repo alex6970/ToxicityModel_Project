@@ -13,7 +13,7 @@ stages {
         steps {
 
           sh 'cd tests'
-          sh 'python -m pytest'
+          sh 'python3.9 -m pytest'
 
               }
             }
