@@ -23,7 +23,7 @@ stage('Git test') {
 
         steps {
 
-          bat 'echo hello'
+          bat 'echo develop'
 
               }
             }
@@ -35,7 +35,7 @@ stage('Git test') {
 
         steps {
 
-          bat 'echo hello'
+          bat 'echo master'
 
               }
             }
