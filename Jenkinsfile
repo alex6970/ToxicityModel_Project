@@ -9,7 +9,7 @@ stages {
 
 stage('Test git') {
             steps {
-                sh 'git status'
+                sh 'git remote -v'
 
             }
         }
