@@ -27,7 +27,8 @@ stages {
         steps {
 
           sh 'cd tests'
-          sh 'pip install -U pytest'
+          sh 'python -m pip install --upgrade pip'
+          sh 'pip install -r requirements.txt'
           sh 'python -m pytest'
 
               }
