@@ -7,17 +7,28 @@ environment {
 
 stages {
 
+stage('Test git') {
+            steps {
+                sh 'git status'
 
-
-  stage('Running the test') {
-        steps {
-
-          sh 'cd tests'
-          sh 'pip3.9 install -r requirements.txt'
-          sh 'python3.9 -m pytest'
-
-              }
             }
+        }
+
+stage('Building') {
+      steps {
+
+        sh 'docker-compose build'
+
+            }
+          }
+
+stage('Running the container') {
+      steps {
+
+        sh 'docker-compose up -d'
+
+            }
+          }
 
   stage('Container down and cleaning') {
         steps {
