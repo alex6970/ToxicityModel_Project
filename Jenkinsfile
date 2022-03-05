@@ -6,29 +6,15 @@ stages {
 
 
 
-stage('Building') {
+stage('Git test') {
       steps {
 
-        bat 'docker-compose build'
+        bat 'git branch'
 
             }
           }
 
-stage('Running the container') {
-      steps {
 
-        bat 'docker-compose up -d'
-
-            }
-          }
-
-  stage('Container down and cleaning') {
-        steps {
-
-          bat 'docker-compose down'
-
-              }
-            }
 
   }
 }
