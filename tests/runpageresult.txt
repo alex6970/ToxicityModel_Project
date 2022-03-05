@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style2.css">
+
+<head>
+  <title>The Results</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <nav class="navbar" style="background-color: #2f3542;">
+    <img class="efreiLogo" src="https://www.efrei.fr/wp-content/uploads/2022/01/LOGO_EFREI-Blanc_Web.png", alt="Image"/>
+  </nav>
+
+
+  <div class="header">
+    <h1>Welcome to the results page.</h1>
+    <h3> The text you submitted is : <strong>Hello, my name is Goldy and i want to say to you that i appreciate the fact you are an asshole.</strong></h3>
+
+  </div>
+
+
+  <div class="centered">
+
+    <h2>Toxicity results on your text : </h2>
+
+    <ul class="list-group">
+      <li class="list-group-item">Toxicity : 0.93 </li>
+      <li class="list-group-item">Severe Toxicity : 0.03 </li>
+      <li class="list-group-item">Obscene : 0.84 </li>
+      <li class="list-group-item">Threat : 0.0 </li>
+      <li class="list-group-item">Insult : 0.82 </li>
+      <li class="list-group-item">Identity attack : 0.01 </li>
+    </ul>
+
+
+  </div>
+
+  <footer class="text-center text-white fixed-bottom">
+
+    <a href="https://github.com/alex6970/ToxicityModel_Project"><i class="fab fa-github fa-2x"></i></a>
+    <p>© Made by Alexandra Goncalves, Sandra Keutcha and Elisa Nitschké. </p>
+
+  </footer>
+
+
+
+
+</body>
+</html>
