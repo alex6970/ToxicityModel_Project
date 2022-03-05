@@ -27,7 +27,7 @@ stages {
         steps {
 
           sh 'cd tests'
-          sh 'python -m pytest'
+          sh 'python'
 
               }
             }
