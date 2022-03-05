@@ -27,7 +27,8 @@ stages {
         steps {
 
           sh 'cd tests'
-          sh 'python'
+          sh 'pip install -U pytest'
+          sh 'python -m pytest'
 
               }
             }
