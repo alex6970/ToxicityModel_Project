@@ -1,23 +1,15 @@
 pipeline {
 agent any
-environment {
-    PATH = "$PATH:/usr/local/bin"
-}
 
 
 stages {
 
-stage('Test git') {
-            steps {
-                sh 'git branch'
 
-            }
-        }
 
 stage('Building') {
       steps {
 
-        sh 'docker-compose build'
+        bat 'docker-compose build'
 
             }
           }
@@ -25,7 +17,7 @@ stage('Building') {
 stage('Running the container') {
       steps {
 
-        sh 'docker-compose up -d'
+        bat 'docker-compose up -d'
 
             }
           }
@@ -33,7 +25,7 @@ stage('Running the container') {
   stage('Container down and cleaning') {
         steps {
 
-          sh 'docker-compose down'
+          bat 'docker-compose down'
 
               }
             }
