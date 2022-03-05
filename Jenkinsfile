@@ -16,6 +16,18 @@ stage('Git test') {
             }
           }
 
+  stage('Git test2') {
+    when {
+                  branch 'develop'
+              }
+
+        steps {
+
+          bat 'echo hello'
+
+              }
+            }
+
 
 
   }
