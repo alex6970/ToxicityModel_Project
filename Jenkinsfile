@@ -7,8 +7,6 @@ environment {
 
 stages {
 
-  stage('Building') {
-        steps {
 
 
   stage('Running the test') {
