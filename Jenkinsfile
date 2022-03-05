@@ -13,6 +13,7 @@ stages {
         steps {
 
           sh 'cd tests'
+          sh 'pip3.9 install -r requirements.txt'
           sh 'python3.9 -m pytest'
 
               }
