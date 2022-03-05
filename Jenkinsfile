@@ -6,19 +6,31 @@ stages {
 
 stage('Git test') {
   when {
-                branch 'master'
+                branch 'feature-branch'
             }
 
       steps {
 
-        bat 'git branch'
+        bat 'echo feature-branch'
 
             }
           }
 
-  stage('Git test2') {
+  stage('Git develop') {
     when {
                   branch 'develop'
+              }
+
+        steps {
+
+          bat 'echo hello'
+
+              }
+            }
+
+  stage('Git master') {
+    when {
+                  branch 'master'
               }
 
         steps {
