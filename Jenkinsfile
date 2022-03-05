@@ -13,7 +13,6 @@ stages {
         steps {
 
           sh 'cd tests'
-          sh 'pip3 install -U pytest'
           sh 'python -m pytest'
 
               }
