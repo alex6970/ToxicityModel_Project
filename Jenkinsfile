@@ -10,11 +10,7 @@ stages {
   stage('Building') {
         steps {
 
-          sh 'echo $PATH'
-
-          // sh 'export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin/'
-
-          sh '/usr/local/bin/docker-compose build'
+          sh 'docker-compose build'
 
               }
             }
