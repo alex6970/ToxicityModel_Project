@@ -5,8 +5,6 @@ from detoxify import Detoxify
 
 app = Flask(__name__)
 
-# model = torch.load("models/model.pt")
-# model = torch.hub.load('unitaryai/detoxify','toxic_bert')
 model = Detoxify('original')
 
 
