@@ -12,12 +12,12 @@ stage('Feature branch deployment and testing') {
 
       steps {
 
-        bat 'echo feature-branch'
-        bat 'docker-compose build'
-        bat 'docker-compose up -d'
+        bat '''echo feature-branch'''
+        bat '''docker-compose build'''
+        bat '''docker-compose up -d'''
 
-        bat 'cd tests'
-        bat 'python -m pytest'
+        bat '''cd tests'''
+        bat '''python -m pytest'''
 
             }
           }
