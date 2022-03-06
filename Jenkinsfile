@@ -31,9 +31,7 @@ stage('Feature branch deployment, testing') {
 
         steps {
 
-          bat '''
-          git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
-          git fetch --all'''
+          bat 'git branch'
           bat 'git checkout develop'
 
               }
