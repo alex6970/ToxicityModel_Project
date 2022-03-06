@@ -4,10 +4,11 @@ agent any
 
 stages {
 
-stage('Git test') {
+stage('Feature branch deployment and testing') {
   when {
                 branch 'feature-branch'
             }
+
 
       steps {
 
@@ -15,6 +16,8 @@ stage('Git test') {
 
             }
           }
+
+
 
   stage('Git develop') {
     when {
