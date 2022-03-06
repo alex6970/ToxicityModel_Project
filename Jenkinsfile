@@ -42,15 +42,6 @@ stage('Feature branch deployment, testing') {
               }
     }
 
-  stage('Git testing release') {
-
-        steps {
-
-          bat 'git branch'
-
-              }
-            }
-
 
   stage('Git develop') {
     when {
