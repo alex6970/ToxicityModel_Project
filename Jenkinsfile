@@ -41,3 +41,34 @@ stage('Feature branch deployment, testing') {
 
               }
     }
+
+
+
+  stage('Git develop') {
+    when {
+                  branch 'develop'
+              }
+
+        steps {
+
+          bat 'echo develop'
+
+              }
+            }
+
+  stage('Git master') {
+    when {
+                  branch 'master'
+              }
+
+        steps {
+
+          bat 'echo master'
+
+              }
+            }
+
+
+
+  }
+}
