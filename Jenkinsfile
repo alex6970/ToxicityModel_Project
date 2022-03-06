@@ -31,10 +31,13 @@ stage('Feature branch deployment, testing') {
 
         steps {
 
-        withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-                 bat "git fetch"
-                 bat "git branch"
-             }
+        bat '''
+        git fetch --all'
+        git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
+        git checkout ${GIT_BRANCH}
+        git branch
+        '''
+
 
               }
     }
