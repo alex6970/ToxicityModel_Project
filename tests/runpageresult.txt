@@ -1,11 +1,11 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+<link rel="stylesheet" href="/static/css/style2.css">
 
 <head>
   <title>The Results</title>
@@ -20,7 +20,7 @@
 
   <div class="header">
     <h1>Welcome to the results page.</h1>
-    <h3> The text you submitted is : <strong>{{submittedText}}</strong></h3>
+    <h3> The text you submitted is : <strong>Hello, my name is Goldy and i want to say to you that i appreciate the fact you are an asshole.</strong></h3>
 
   </div>
 
@@ -30,12 +30,12 @@
     <h2>Toxicity results on your text : </h2>
 
     <ul class="list-group">
-      <li class="list-group-item">Toxicity : {{toxRes}} </li>
-      <li class="list-group-item">Severe Toxicity : {{sevRes}} </li>
-      <li class="list-group-item">Obscene : {{obsRes}} </li>
-      <li class="list-group-item">Threat : {{thrRes}} </li>
-      <li class="list-group-item">Insult : {{insRes}} </li>
-      <li class="list-group-item">Identity attack : {{idaRes}} </li>
+      <li class="list-group-item">Toxicity : 0.93 </li>
+      <li class="list-group-item">Severe Toxicity : 0.03 </li>
+      <li class="list-group-item">Obscene : 0.84 </li>
+      <li class="list-group-item">Threat : 0.0 </li>
+      <li class="list-group-item">Insult : 0.82 </li>
+      <li class="list-group-item">Identity attack : 0.01 </li>
     </ul>
 
 
