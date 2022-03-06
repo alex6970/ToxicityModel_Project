@@ -6,7 +6,7 @@ stages {
 
 stage('Feature branch deployment and testing') {
   when {
-                branch 'feature-branch'
+                branch 'feature_branch'
             }
 
       steps {
