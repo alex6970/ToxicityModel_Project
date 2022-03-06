@@ -31,8 +31,9 @@ stage('Feature branch deployment, testing') {
 
         steps {
 
-          bat 'git branch'
-          bat 'git checkout develop'
+        withCredentials([usernamePassword(credentialsId: 'GitHub', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                 bat "git branch"
+             }
 
               }
     }
