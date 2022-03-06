@@ -4,7 +4,7 @@ agent any
 
 stages {
 
-stage('Feature branch deployment and testing') {
+stage('Feature branch deployment, testing and pushing') {
   when {
                 branch 'feature_branch'
             }
