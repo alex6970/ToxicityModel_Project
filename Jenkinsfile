@@ -31,7 +31,7 @@ stage('Feature branch deployment, testing') {
 
         steps {
 
-          bat 'echo ${GIT_BRANCH}'
+          bat 'git checkout develop'
 
               }
     }
