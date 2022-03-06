@@ -4,23 +4,43 @@ agent any
 
 stages {
 
-stage('Feature branch deployment and testing') {
+stage('Feature branch deployment, testing') {
   when {
-                branch 'feature-branch'
+                branch 'feature_branch'
             }
-
 
       steps {
+        bat 'echo Hello'
+        //bat '''
+        //echo feature-branch
+        //docker-compose build
+        //docker-compose up -d
 
-        bat 'echo feature-branch'
-        bat 'docker-compose build'
-        bat 'docker-compose up -d'
-
-        bat 'cd tests'
-        bat 'python -m pytest'
+        //cd tests
+        //python -m pytest
+        // '''
 
             }
-          }
+  }
+
+
+  stage('Feature branch push to develop') {
+    when {
+                  branch 'feature_branch'
+              }
+
+        steps {
+        bat 'echo GIT_BRANCH'
+        bat '''
+        git fetch
+        git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
+        git checkout ${GIT_BRANCH}
+        git branch
+        '''
+
+
+              }
+    }
 
 
 
@@ -49,46 +69,6 @@ stage('Feature branch deployment and testing') {
             }
 
 
-
-  }
-}
-
-
-
-
-
-
-pipeline {
-agent any
-
-
-stages {
-
-
-
-stage('Building') {
-      steps {
-
-        bat 'docker-compose build'
-
-            }
-          }
-
-stage('Running the container') {
-      steps {
-
-        bat 'docker-compose up -d'
-
-            }
-          }
-
-  stage('Container down and cleaning') {
-        steps {
-
-          bat 'docker-compose down'
-
-              }
-            }
 
   }
 }
