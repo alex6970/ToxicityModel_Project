@@ -4,7 +4,7 @@ agent any
 
 stages {
 
-stage('Feature branch deployment, testing and pushing') {
+stage('Feature branch deployment, testing') {
   when {
                 branch 'feature_branch'
             }
@@ -21,7 +21,20 @@ stage('Feature branch deployment, testing and pushing') {
          '''
 
             }
-          }
+  }
+
+
+  stage('Feature branch push to develop') {
+    when {
+                  branch 'feature_branch'
+              }
+
+        steps {
+
+          bat 'git echo ${GIT_BRANCH}'
+
+              }
+    }
 
 
 
