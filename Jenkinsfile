@@ -32,7 +32,7 @@ stage('Feature branch deployment, testing') {
         steps {
         bat 'echo GIT_BRANCH'
         bat '''
-        git fetch'
+        git fetch
         git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
         git checkout ${GIT_BRANCH}
         git branch
