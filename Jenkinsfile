@@ -10,7 +10,7 @@ stage('Feature branch deployment, testing') {
             }
 
       steps {
-        bat 'echo Hello'
+        bat 'echo ${GIT_USERNAME}'
         //bat '''
         //echo feature-branch
         //docker-compose build
