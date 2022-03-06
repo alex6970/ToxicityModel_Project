@@ -32,6 +32,7 @@ stage('Feature branch deployment, testing') {
         steps {
 
         withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                 bat "git fetch"
                  bat "git branch"
              }
 
